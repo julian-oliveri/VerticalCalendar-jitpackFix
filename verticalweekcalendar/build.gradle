@@ -1,25 +1,5 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.novoda.bintray-release'
-
-publish {
-
-    Properties properties = new Properties()
-    properties.load(project.rootProject.file('local.properties').newDataInputStream())
-
-    bintrayUser = properties.getProperty('bintray.user')
-    bintrayKey = properties.getProperty('bintray.apiKey')
-    dryRun = false
-
-    userOrg = 'emcthye'
-    repoName = 'VerticalCalendar'
-
-    groupId = 'com.emc.thye'
-    artifactId = 'VerticalCalendar'
-    publishVersion = '1.0.4'
-
-    desc = 'A custom vertical infnite scroll calendar library'
-    website = 'https://github.com/emcthye/VerticalCalendar'
-}
+apply plugin: 'maven-publish'
 
 android {
     compileSdkVersion 29
@@ -29,7 +9,6 @@ android {
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
     }
@@ -40,7 +19,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
 }
 
 dependencies {
@@ -52,4 +30,16 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation "androidx.paging:paging-runtime:2.1.0"
     implementation 'androidx.cardview:cardview:1.0.0'
+}
+
+publishing {
+    publications {
+        release(MavenPublication) {
+            artifact("$buildDir/outputs/aar/${project.name}-release.aar")
+
+            groupId = 'com.github.julian-oliveri'
+            artifactId = 'VerticalCalendar-jitpackFix'
+            version = '1.0.0'
+        }
+    }
 }
