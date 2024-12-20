@@ -10,11 +10,17 @@ implementation 'com.emc.thye:VerticalCalendar:1.0.4'
 WITH
 ```
 implementation 'com.github.julian-oliveri:VerticalCalendar-jitpackFix:v1.0.4'
+
+OR
+
+implementation 'com.github.julian-oliveri:VerticalCalendar-jitpackFix:v1.0.6'
+
 ```
+The main difference is the gradle tools version, I personally use the v1.0.6 but the v1.0.4 also works
 
 And you should be all set 
 
-NOTE: I couldnt manage to find the issue with tag v1.0.5 so I gave up :( if you know the answer i would love to know
+NOTE: I couldnt manage to find the issue with tag v1.0.5 so I gave up :(
 
 ## THE ORIGINAL README
 
