@@ -1,3 +1,23 @@
+## This library is made by someone else, i just changed some stuff to be able to use it via jitpack
+
+If you have the same issue as me (that the dependency cant be resolved) replace the implementation by this, it should work
+
+REPLACE 
+```
+implementation 'com.emc.thye:VerticalCalendar:1.0.4'
+```
+
+WITH
+```
+implementation 'com.github.julian-oliveri:VerticalCalendar-jitpackFix:v1.0.4'
+```
+
+And you should be all set 
+
+NOTE: I couldnt manage to find the issue with tag v1.0.5 so I gave up :( if you know the answer i would love to know
+
+## THE ORIGINAL README
+
 # VerticalCalendar
 Scroll calendar days infinitely in a vertical column.
 
