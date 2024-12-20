@@ -20,6 +20,8 @@ The main difference is the gradle tools version, I personally use the v1.0.6 but
 
 And you should be all set 
 
+I wont be providing support for this, but at least it compiles
+
 NOTE: I couldnt manage to find the issue with tag v1.0.5 so I gave up :(
 
 ## THE ORIGINAL README
